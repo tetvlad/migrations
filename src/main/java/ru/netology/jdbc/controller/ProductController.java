@@ -22,4 +22,9 @@ public class ProductController {
     public List<String> fetchProduct(@RequestParam("name") String name) {
         return productRepository.getProductName(name);
     }
+
+    @GetMapping("/public")
+    public String publicEndpoint() {
+        return "Всё ок. Без авторизации";
+    }
 }
